@@ -3,7 +3,10 @@ library(ggplot2)
 library(dplyr)
 library(rlang)
 
-# create a custom theme for plots ----
+#' create a custom theme for plots ----
+#'
+#' remove gridlines
+#' set the background to white
 plot_theme <- theme(
   panel.grid.minor = element_blank(),
   panel.grid.major = element_blank(),
