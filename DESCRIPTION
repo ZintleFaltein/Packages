@@ -1,10 +1,10 @@
-Package: Packages
-Title: What the Package Does (One Line, Title Case)
+Package: Helper functions
+Title: Helper Functions For Data Visualisation
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Zintle", "Faltein-Maqubela", , "zintlefaltein.zf@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: This is a package that stores helper functions for visualising data during the Exploratory Data Analysis phase. It contains functions to standardise a plot theme, and prevents the need to repeat certain pieces of code for univariate and multivariate analysis.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
