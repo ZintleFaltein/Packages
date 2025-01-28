@@ -18,14 +18,14 @@ plot_theme <- theme(
   strip.text.x = element_text(size = 7)
 )
 
-#' Create a plot that visualises the number of observations per category
+#' Create a horizontal bar plot that visualises the number of observations per category
 #'
 #' @param df a dataframe
 #' @param column the observations to be visualised
 #' @param geom the geometry function to use (the default is geom_bar)
 #' @param y_label y-axis label
 #' @param x_label x-axis label
-bar_count <- function(df,
+horizontal_bar_count <- function(df,
                       column,
                       geom = geom_bar(fill = '#2072b2'),
                       y_label = 'Count',
@@ -35,6 +35,29 @@ bar_count <- function(df,
 
   df %>%
     ggplot(aes(y = column)) +
+    geom +
+    plot_theme +
+    labs(x = x_label, y = y_label)
+
+}
+
+#' Create a vertical bar plot that visualises the number of observations per category
+#'
+#' @param df a dataframe
+#' @param column the observations to be visualised
+#' @param geom the geometry function to use (the default is geom_bar)
+#' @param y_label y-axis label
+#' @param x_label x-axis label
+vertical_bar_count <- function(df,
+                                 column,
+                                 geom = geom_bar(fill = '#2072b2'),
+                                 y_label = 'Count',
+                                 x_label = 'Category') {
+  # Convert character vector of grouping columns into symbols
+  #group_syms <- syms(group_columns)
+
+  df %>%
+    ggplot(aes(x = column)) +
     geom +
     plot_theme +
     labs(x = x_label, y = y_label)
