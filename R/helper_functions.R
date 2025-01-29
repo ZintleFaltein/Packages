@@ -27,7 +27,7 @@ plot_theme <- theme(
 #' @param x_label x-axis label
 horizontal_bar_count <- function(df,
                       column,
-                      geom = geom_bar(fill = '#2072b2'),
+                      geom = geom_bar(fill = '#3B1C32'),
                       y_label = 'Count',
                       x_label = 'Category') {
   # Convert character vector of grouping columns into symbols
@@ -50,7 +50,7 @@ horizontal_bar_count <- function(df,
 #' @param x_label x-axis label
 vertical_bar_count <- function(df,
                                  column,
-                                 geom = geom_bar(fill = '#2072b2'),
+                                 geom = geom_bar(fill = '#3B1C32'),
                                  y_label = 'Count',
                                  x_label = 'Category') {
   # Convert character vector of grouping columns into symbols
